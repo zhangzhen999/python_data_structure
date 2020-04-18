@@ -1,0 +1,11 @@
+python2 ~/THUMT/trainer.py --input /home/zz/data/6wan/train.bpe32k.mn.shuf /home/zz/data/6wan/train.bpe32k.ch.shuf --vocabulary /home/zz/data/6wan/vocab.32k.mn.txt /home/zz/data/6wan/vocab.32k.ch.txt --model transformer --validation /home/zz/data/6wan/val.bpe32k.mn --references /home/zz/data/6wan/val.bpe32k.ch --parameters=batch_size=4096,device_list=[0],update_cycle=4,train_steps=200000
+
+python2 ~/THUMT/trainer.py --input /home/zz/data/120/train.bpe32k.mn.shuf /home/zz/data/6wan/train.bpe32k.ch.shuf --vocabulary /home/zz/data/6wan/vocab.32k.mn.txt /home/zz/data/6wan/vocab.32k.ch.txt --model transformer --validation /home/zz/data/6wan/val.bpe32k.mn --references /home/zz/data/6wan/val.bpe32k.ch --parameters=batch_size=4096,device_list=[0],update_cycle=4,train_steps=200000
+
+
+2019-07-18 15:46:33.727686: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+W0718 15:46:38.837939 140137737238272 deprecation.py:323] From /home/zz/.local/lib/python2.7/site-packages/tensorflow/python/training/saver.py:1066: get_checkpoint_mtimes (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+
+服务器工作站
+python THUMT/trainer.py --input /home/work/notebooks/CWMT118502/train.bpe32k.mn.shuf /home/work/notebooks/CWMT118502/train.bpe32k.ch.shuf --vocabulary /home/work/notebooks/CWMT118502/vocab.32k.mn.txt /home/work/notebooks/CWMT118502/vocab.32k.ch.txt --model transformer --validation /home/work/notebooks/CWMT118502/val.bpe32k.mn --references /home/work/notebooks/CWMT118502/val.bpe32k.ch --parameters=batch_size=4096,device_list=[0],update_cycle=4,train_steps=100000
+
